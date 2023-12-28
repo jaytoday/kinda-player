@@ -85,7 +85,7 @@ div.kinda-player-status-line {
   height: .4em;
   border: 1px solid #AAA;
  -moz-border-radius: .2em;
- -webkit-border-radus: .2em;
+ -webkit-border-radius: .2em;
   cursor: pointer;
   margin-top: .2em;
 }
@@ -98,7 +98,7 @@ div.kinda-player-status-load {
   background: #CCC;
   z-index: 1;
   -moz-border-radius: .1em;
-  -webkit-border-radus: .1em;
+  -webkit-border-radius: .1em;
 }
 div.kinda-player-status-play {
   background: #999;
@@ -177,6 +177,30 @@ input.kinda-player-button-list {
   right: 0px;
 }
 
+/** The volume control bar styles */
+div.kinda-player div.kinda-player-volume-control {
+  position: absolute;
+  right: 48px;
+  bottom: .4em;
+  width: 32px;
+  height: 18px;
+}
+div.kinda-player div.kinda-player-volume-bar, 
+div.kinda-player div.kinda-player-volume-bar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:  0%;
+  height: 100%;
+  cursor: pointer;
+  background: url(../images/kinda_player_icons.png) no-repeat -155px center;
+}
+div.kinda-player div.kinda-player-volume-bar-bg {
+  width: 100%;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
 
 /** the playlist styles */
 ul.kinda-player-list {
@@ -232,6 +256,7 @@ div.kinda-player-mini input.kinda-player-button-prev,
 div.kinda-player-mini input.kinda-player-button-next,
 div.kinda-player-mini input.kinda-player-button-stop,
 div.kinda-player-mini input.kinda-player-button-list,
+div.kinda-player-mini div.kinda-player-volume-control,
 div.kinda-player-mini ul.kinda-player-list {
   display: none;
 }
